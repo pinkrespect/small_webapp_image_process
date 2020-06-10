@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Style Transfer</title>
+</head>
+<body>
+<center>
+<h1>Let's do Style Transfer!</h1>
+<h2>주의 사항</h2>
+<p>
+<ul>
+<li>
+3번 서버 관리자에게(또는 프로젝트 관리자에게) <b>GPU 사용이 가능한지</b>를 먼저 문의해 주세요.<br>
+때에 따라서는 가용 GPU가 없는 경우가 있습니다.
+</li>
+<li>
+원하는 Style Transfer 방식에 따라 시간이 오래 소요되는 경우가 있습니다.<br>
+<b>웹 페이지의 연결이 끊기더라도 서버에는 결과물이 남을 수 있습니다.</b><br>
+관리자에게 문의해 주세요.
+</li>
+</ul>
+</p>
+<h2>사용 방법</h2>
+<p>
+<ul>
+<li>
+<font color="red">*</font>가 붙어 있는 항목은 필수 입력 요소입니다.
+<ul>
+<li>
+원본 이미지 - 변환 하고 싶은 사진
+</li>
+<li>
+스타일 이미지 - 원본 이미지에 적용하고 싶은 스타일
+</li>
+<li>
+가중치 - 스타일을 얼마나 촘촘하게 적용할지를 정할 수 있습니다.<br>
+0에 가까워 질수록 촘촘해집니다. 기본 값은 1.0입니다.
+</li>
+</ul>
+</li>
+<li>
+선택 입력 요소는 다음과 같습니다.
+<ul>
+<li>
+원본 마스크 이미지
+</li>
+<li>
+스타일 마스크 이미지
+</li>
+</ul>
+</li>
+</ul>
+</p>
+
+
+{% extends "/image_upload.html" %}
+</center>
+</body>
+</html>
+

@@ -1,0 +1,31 @@
+
+<hr>
+<H2>Image Transfer</H2>
+
+<h3>이미지 업로드</h3>
+
+<form method="POST" enctype="multipart/form-data">
+<p>
+<font color="red">*</font>
+    {{ form.hidden_tag() }}
+    {{ form.photo(multiple="multiple")}}
+    {% for error in form.photo.errors %}
+        <span style="color: red;">{{ error }}</span>
+    {% endfor %}
+</p>
+<p>
+<font color="red">*</font>
+    {{ form.hidden_tag() }}
+    {{ form.photo(multiple="multiple")}}
+    {% for error in form.photo.errors %}
+        <span style="color: red;">{{ error }}</span>
+    {% endfor %}
+<br>
+    {{ form.submit }}
+</form>
+</p>
+
+{% if success %}
+<br>
+<p>Upload Success!</p>
+{% endif %}
